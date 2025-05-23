@@ -10,6 +10,7 @@
   --color-s: #767676;
   --color-sd: #333;
   --color-sl: #dadada;
+  --color-sxl: #f5f5f5;
 
   --color-grad1: #5ba5f8;
   --color-grad2: #7c81ff;
@@ -20,7 +21,7 @@
   --text-xl: 20px;
 
   --text-lg: 18px;
-  --text-md: 16px;
+  --text-mid: 16px;
   --text-sm: 14px;
 
   --spacing-normal: 20px;
@@ -38,8 +39,8 @@
 
 :root {
   font-family:
-    Pretendard,
     'Pretendard Variable',
+    'Pretendard',
     -apple-system,
     BlinkMacSystemFont,
     system-ui,
@@ -55,6 +56,7 @@
     sans-serif;
   font-size: 16px;
   color: #111;
+  letter-spacing: -0.48px;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -90,5 +92,13 @@ input[type='number'] {
 
   .shadow-login {
     box-shadow: 0px 4px 20px 0px rgba(55, 127, 248, 0.04);
+  }
+
+  .shadow-card {
+    box-shadow: 8px 8px 30px rgba(55, 127, 248, 0.1);
+  }
+
+  .shadow-button {
+    box-shadow: 4px 4px 20px 0px rgba(55, 127, 248, 0.1);
   }
 }
