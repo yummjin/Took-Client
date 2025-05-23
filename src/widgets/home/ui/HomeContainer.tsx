@@ -28,7 +28,7 @@ export default function HomeContainer() {
           title="공지사항"
           description="예정된 선거를 확인해보세요"
           icon={NoticeIcon}
-          to={PATH.HOME}
+          to={PATH.NOTICE}
         />
       </div>
     </div>
