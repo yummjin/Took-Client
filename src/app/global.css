@@ -14,9 +14,9 @@
   --color-grad1: #5ba5f8;
   --color-grad2: #7c81ff;
 
-  --text-3xl: 32px;
+  --text-4xl: 32px;
+  --text-3xl: 28px;
   --text-2xl: 24px;
-
   --text-xl: 20px;
 
   --text-lg: 18px;
@@ -24,6 +24,16 @@
   --text-sm: 14px;
 
   --spacing-normal: 20px;
+  --spacing-normal-half: 10px;
+
+  --radius-lg: 20px;
+  --radius-md: 12px;
+}
+
+@font-face {
+  font-family: 'Fredoka';
+  src: url('../assets/font/fredoka-variable.ttf') format('truetype');
+  font-weight: 600;
 }
 
 :root {
@@ -47,6 +57,18 @@
   color: #111;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
 @layer utilities {
   .container-mobile {
     max-width: 402px;
@@ -60,5 +82,13 @@
   .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+
+  .logo {
+    font-family: Fredoka;
+  }
+
+  .shadow-login {
+    box-shadow: 0px 4px 20px 0px rgba(55, 127, 248, 0.04);
   }
 }
