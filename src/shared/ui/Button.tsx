@@ -15,11 +15,12 @@ const ButtonVariants = cva(
       intent: {
         primary: 'bg-md text-white',
         textmain: 'text-m',
+        gradient: 'bg-gradient-to-r from-grad2 to-grad1 text-white',
       },
       size: {
         fit: 'w-full h-fit text-lg',
         sm: '',
-        md: '',
+        md: 'w-full h-12 text-lg',
         lg: 'w-full h-14 text-xl',
       },
     },
