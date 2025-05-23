@@ -18,7 +18,9 @@ export default function LoginForm() {
         <Input placeholder="패스워드" intent="login" type="password" />
       </div>
       <div className="flex w-full flex-col gap-3">
-        <Button onClick={() => replace(PATH.HOME, {})}>학생으로 로그인</Button>
+        <Button type="button" onClick={() => replace(PATH.HOME, {})}>
+          학생으로 로그인
+        </Button>
         <Button intent="textmain" size="fit">
           관리자로 로그인
         </Button>
