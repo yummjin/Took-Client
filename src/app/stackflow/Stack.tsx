@@ -4,10 +4,11 @@ import { stackflow } from '@stackflow/react';
 
 import { LoginScreen } from '@/screen/login/ui';
 import { HomeScreen } from '@/screen/home/ui';
+import { NoticeScreen } from '@/screen/notice/ui';
 
 export const { Stack, useFlow } = stackflow({
   transitionDuration: 350,
-  activities: { LoginScreen, HomeScreen },
+  activities: { NoticeScreen, LoginScreen, HomeScreen },
   plugins: [
     basicRendererPlugin(),
     basicUIPlugin({
