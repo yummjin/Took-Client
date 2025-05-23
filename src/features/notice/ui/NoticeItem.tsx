@@ -2,12 +2,21 @@ import { MessageIcon, NotificationIcon } from '@/assets/icon';
 import type { Notice } from '../types';
 
 import { cn } from '@/shared/utils';
+import { useFlow } from '@/app/stackflow';
+import { PATH } from '@/shared/constants';
 
-export default function NoticeItem({ title, type, date }: Notice) {
+export default function NoticeItem({ id, title, type, date }: Notice) {
   const typeLabel = type === 'NOTIFICATION' ? '알림' : '예정';
+  const { push } = useFlow();
 
   return (
-    <button className="flex w-full cursor-pointer items-center overflow-hidden px-5 py-6 focus:outline-none">
+    <button
+      name={`${id}`}
+      className="flex w-full cursor-pointer items-center overflow-hidden px-5 py-6 focus:outline-none"
+      onClick={() =>
+        push(PATH.NOTICE_CONTENT, { notice: { id, title, type, date } })
+      }
+    >
       <img
         src={type === 'NOTIFICATION' ? NotificationIcon : MessageIcon}
         className="shadow-noticeItem size-10 rounded-md"
