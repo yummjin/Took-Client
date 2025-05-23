@@ -7,7 +7,7 @@ export default function NoticeItem({ title, type, date }: Notice) {
   const typeLabel = type === 'NOTIFICATION' ? '알림' : '예정';
 
   return (
-    <button className="flex w-full items-center overflow-hidden px-5 py-6 focus:outline-none">
+    <button className="flex w-full cursor-pointer items-center overflow-hidden px-5 py-6 focus:outline-none">
       <img
         src={type === 'NOTIFICATION' ? NotificationIcon : MessageIcon}
         className="shadow-noticeItem size-10 rounded-md"
