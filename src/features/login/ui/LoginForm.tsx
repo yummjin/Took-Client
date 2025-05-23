@@ -1,0 +1,23 @@
+import { Button, Input } from '@/shared/ui';
+
+export default function LoginForm() {
+  return (
+    <form className="flex w-full flex-col gap-y-15">
+      <div className="flex w-full flex-col gap-[10px]">
+        <Input
+          intent="login"
+          placeholder="학번 8자리"
+          className="no-spinner"
+          type="number"
+        />
+        <Input placeholder="패스워드" intent="login" type="password" />
+      </div>
+      <div className="flex w-full flex-col gap-3">
+        <Button>학생으로 로그인</Button>
+        <Button intent="textmain" size="fit">
+          관리자로 로그인
+        </Button>
+      </div>
+    </form>
+  );
+}
