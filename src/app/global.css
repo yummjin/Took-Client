@@ -101,4 +101,8 @@ input[type='number'] {
   .shadow-button {
     box-shadow: 4px 4px 20px 0px rgba(55, 127, 248, 0.1);
   }
+
+  .shadow-noticeItem {
+    box-shadow: 2px 8px 40px -3.034px rgba(50, 65, 96, 0.1);
+  }
 }

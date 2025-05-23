@@ -28,7 +28,7 @@ export default function HomeContainer() {
           title="공지사항"
           description="예정된 선거를 확인해보세요"
           icon={NoticeIcon}
-          to={PATH.HOME}
+          to={PATH.NOTICE}
         />
       </div>
     </div>
@@ -47,7 +47,11 @@ const ServiceButton = ({
     <button
       name={title}
       className="shadow-button flex w-full cursor-pointer justify-between rounded-lg border-[1px] border-white bg-white/50 p-5 focus:outline-none"
-      onClick={() => push(to, {})}
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      onClick={() => push(to, { notice: {} as any })}
+      /**해당 라인의 경우 notice content screen으로 절대 이동하지 않을 버튼입니다.
+       * 하지만 타입 에러가 발생하여 다음과 같이 불가피하게 any 타입으로 처리합니다.
+       */
     >
       <div className="flex flex-col items-start">
         <span className="text-lg font-semibold">{title}</span>
