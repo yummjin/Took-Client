@@ -11,7 +11,7 @@ import { VOTE_MOCK } from '@/widgets/vote/mock';
 
 export default function VoteContainer() {
   const [selected, setSelected] = useState(-1);
-  const { push } = useFlow();
+  const { push, replace } = useFlow();
 
   const handleClick = (index: number) => {
     if (selected === index) setSelected(-1);
@@ -48,7 +48,10 @@ export default function VoteContainer() {
           VS
         </div>
       </div>
-      <Button intent={selected !== -1 ? 'gradient' : 'disabled'}>
+      <Button
+        intent={selected !== -1 ? 'gradient' : 'disabled'}
+        onClick={() => replace(PATH.VOTE_COMPLETE, {}, { animate: false })}
+      >
         투표완료
       </Button>
     </div>
