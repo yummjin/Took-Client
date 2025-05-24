@@ -2,15 +2,16 @@ import { AppScreen } from '@stackflow/plugin-basic-ui';
 
 import { TitleAppBar } from '@/shared/ui';
 import { VotePromiseBg } from '@/assets/image';
+import { VotePromiseContainer } from '@/widgets/vote-promise/ui';
 
-export default function VoteScreen() {
+export default function VotePromiseScreen() {
   return (
     <>
       <AppScreen
         backgroundImage={`url(${VotePromiseBg})`}
         appBar={TitleAppBar('', VotePromiseBg)}
       >
-        <div className="p-normal size-full">투표공약</div>
+        <VotePromiseContainer />
       </AppScreen>
     </>
   );
