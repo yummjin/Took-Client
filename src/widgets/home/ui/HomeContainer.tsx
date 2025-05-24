@@ -22,7 +22,7 @@ export default function HomeContainer() {
           title="선거결과"
           description="역대 선거결과를 확인해보세요"
           icon={ResultIcon}
-          to={PATH.HOME}
+          to={PATH.VOTE_RESULT}
         />
         <ServiceButton
           title="공지사항"

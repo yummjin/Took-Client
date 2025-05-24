@@ -6,10 +6,19 @@ import { LoginScreen } from '@/screen/login/ui';
 import { HomeScreen } from '@/screen/home/ui';
 import { NoticeScreen } from '@/screen/notice/ui';
 import { NoticeContentScreen } from '@/screen/notice-content/ui';
+import { VoteResultScreen } from '@/screen/vote-result/ui';
+import { VoteResultContentScreen } from '@/screen/vote-result-content/ui';
 
 export const { Stack, useFlow } = stackflow({
   transitionDuration: 350,
-  activities: { NoticeScreen, NoticeContentScreen, LoginScreen, HomeScreen },
+  activities: {
+    NoticeScreen,
+    NoticeContentScreen,
+    VoteResultScreen,
+    VoteResultContentScreen,
+    LoginScreen,
+    HomeScreen,
+  },
   plugins: [
     basicRendererPlugin(),
     basicUIPlugin({

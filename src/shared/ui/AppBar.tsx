@@ -20,8 +20,8 @@ export const HomeAppBar = {
   renderRight: () => <img src={UserIcon} alt="user" className="mr-[4px]" />,
 };
 
-export const TitleAppBar = (title: string) => ({
+export const TitleAppBar = (title?: string) => ({
   ...baseStyle,
   backgroundColor: '#fff',
-  title: title,
+  title: title || '',
 });

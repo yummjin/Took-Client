@@ -11,11 +11,7 @@ const NoticeContentScreen: ActivityComponentType<{ notice: Notice }> = ({
   params: { notice: Notice };
 }) => {
   return (
-    <AppScreen
-      preventSwipeBack
-      backgroundColor="#fff"
-      appBar={TitleAppBar('공지사항')}
-    >
+    <AppScreen backgroundColor="#fff" appBar={TitleAppBar('공지사항')}>
       <NoticeContentContainer title={params.notice.title} />
     </AppScreen>
   );
