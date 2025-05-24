@@ -4,7 +4,7 @@ export default function NoticeContainer({ title }: { title: string }) {
 
   return (
     <div className="p-normal scrollbar-hide flex size-full flex-col overflow-scroll">
-      <p className="mt-6 text-lg font-semibold">{title}</p>
+      <p className="mt-mt text-lg font-semibold">{title}</p>
       <p className="mb-[14px] text-sm font-normal tracking-wide text-[#999]">
         2025.03.19
       </p>

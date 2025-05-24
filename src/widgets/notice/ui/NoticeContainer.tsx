@@ -8,7 +8,7 @@ export default function NoticeContainer() {
   const campus = ['수원캠', '서울캠'];
   return (
     <div className="p-normal flex size-full flex-col pt-0">
-      <div className="mt-9 mb-[22px] box-border flex h-13 w-full rounded-[16px] bg-[#F7F7F9] p-0.5 text-lg font-semibold">
+      <div className="mt-mt mb-[22px] box-border flex h-13 w-full rounded-[16px] bg-[#F7F7F9] p-0.5 text-lg font-semibold">
         {campus.map((campusName, index) => (
           <button
             key={campusName}
