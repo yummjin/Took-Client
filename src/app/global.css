@@ -126,4 +126,8 @@ input[type='number'] {
   .shadow-resultContent {
     box-shadow: 11px 8px 30px rgba(55, 127, 248, 0.16);
   }
+
+  .shadow-voteItem {
+    box-shadow: 0px 4px 30px 0px rgba(55, 127, 248, 0.1);
+  }
 }
