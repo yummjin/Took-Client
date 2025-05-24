@@ -26,3 +26,11 @@ export const TitleAppBar = (title?: string, bgImage?: string) => ({
   backgroundImage: `url(${bgImage})`,
   title: title || '',
 });
+
+export const NoBackAppBar = (title?: string, bgImage?: string) => ({
+  ...baseStyle,
+  backgroundColor: '#fff',
+  backgroundImage: `url(${bgImage})`,
+  title: title || '',
+  backButton: { renderIcon: () => <></> },
+});
