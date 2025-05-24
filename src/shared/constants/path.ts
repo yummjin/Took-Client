@@ -3,4 +3,5 @@ export const PATH = {
   LOGIN: 'LoginScreen',
   NOTICE: 'NoticeScreen',
   NOTICE_CONTENT: 'NoticeContentScreen',
+  VOTE_RESULT: 'VoteResultScreen',
 } as const;
