@@ -4,4 +4,5 @@ export const PATH = {
   NOTICE: 'NoticeScreen',
   NOTICE_CONTENT: 'NoticeContentScreen',
   VOTE_RESULT: 'VoteResultScreen',
+  VOTE_RESULT_CONTENT: 'VoteResultContentScreen',
 } as const;

@@ -7,6 +7,7 @@ import { HomeScreen } from '@/screen/home/ui';
 import { NoticeScreen } from '@/screen/notice/ui';
 import { NoticeContentScreen } from '@/screen/notice-content/ui';
 import { VoteResultScreen } from '@/screen/vote-result/ui';
+import { VoteResultContentScreen } from '@/screen/vote-result-content/ui';
 
 export const { Stack, useFlow } = stackflow({
   transitionDuration: 350,
@@ -14,6 +15,7 @@ export const { Stack, useFlow } = stackflow({
     NoticeScreen,
     NoticeContentScreen,
     VoteResultScreen,
+    VoteResultContentScreen,
     LoginScreen,
     HomeScreen,
   },
@@ -23,5 +25,5 @@ export const { Stack, useFlow } = stackflow({
       theme: 'cupertino',
     }),
   ],
-  initialActivity: () => 'VoteResultScreen',
+  initialActivity: () => 'LoginScreen',
 });
