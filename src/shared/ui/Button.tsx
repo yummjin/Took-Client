@@ -9,13 +9,14 @@ interface ButtonsProps
 }
 
 const ButtonVariants = cva(
-  'rounded-md cursor-pointer font-medium focus:outline-none hover:brightness-90',
+  'rounded-md cursor-pointer font-medium focus:outline-none hover:brightness-90 ',
   {
     variants: {
       intent: {
         primary: 'bg-md text-white',
         textmain: 'text-m',
         gradient: 'bg-gradient-to-r from-grad2 to-grad1 text-white',
+        disabled: 'bg-[#F2F3F5] text-s',
       },
       size: {
         fit: 'w-full h-fit text-lg',

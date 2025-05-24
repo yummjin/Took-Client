@@ -1,3 +1,5 @@
+import { useFlow } from '@/app/stackflow';
+import { PATH } from '@/shared/constants';
 import { Button } from '@/shared/ui';
 
 interface CardProps {
@@ -8,6 +10,8 @@ interface CardProps {
 }
 
 export default function Card({ campus, status, title, date }: CardProps) {
+  const { push } = useFlow();
+
   return (
     <>
       <div className="mb-5 flex w-full justify-between">
@@ -25,7 +29,7 @@ export default function Card({ campus, status, title, date }: CardProps) {
       </div>
       <p className="text-md mb-2.5 text-2xl font-semibold">{title}</p>
       <p className="text-s mb-[34px] font-normal">{date}</p>
-      <Button intent="gradient" size="md">
+      <Button intent="gradient" size="md" onClick={() => push(PATH.VOTE, {})}>
         투표하기
       </Button>
     </>
