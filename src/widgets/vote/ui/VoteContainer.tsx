@@ -1,13 +1,17 @@
 import { useState } from 'react';
 
 import { IoChevronForwardSharp } from 'react-icons/io5';
+import { useFlow } from '@/app/stackflow';
 
 import { Button } from '@/shared/ui';
+import { PATH } from '@/shared/constants';
+
 import { VoteItem } from '@/widgets/vote/ui';
-import { VOTE_MOCK } from '../mock';
+import { VOTE_MOCK } from '@/widgets/vote/mock';
 
 export default function VoteContainer() {
   const [selected, setSelected] = useState(-1);
+  const { push } = useFlow();
 
   const handleClick = (index: number) => {
     if (selected === index) setSelected(-1);
@@ -23,7 +27,10 @@ export default function VoteContainer() {
       <p className="text-s mb-[50px] text-lg font-semibold">
         공약을 살펴보고 신중하게 투표해주세요
       </p>
-      <Button className="bg-ml mb-6 flex h-17 items-center justify-between rounded-lg px-5 text-start text-lg">
+      <Button
+        className="bg-ml mb-6 flex h-17 items-center justify-between rounded-lg px-5 text-start text-lg"
+        onClick={() => push(PATH.VOTE_PROMISE, {})}
+      >
         후보자 공약 보러가기
         <IoChevronForwardSharp size={20} />
       </Button>
