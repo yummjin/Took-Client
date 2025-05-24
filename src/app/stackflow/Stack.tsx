@@ -23,5 +23,5 @@ export const { Stack, useFlow } = stackflow({
       theme: 'cupertino',
     }),
   ],
-  initialActivity: () => 'LoginScreen',
+  initialActivity: () => 'VoteResultScreen',
 });
