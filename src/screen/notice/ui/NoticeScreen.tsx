@@ -5,11 +5,7 @@ import { NoticeContainer } from '@/widgets/notice/ui';
 
 export default function NoticeScreen() {
   return (
-    <AppScreen
-      preventSwipeBack
-      backgroundColor="#fff"
-      appBar={TitleAppBar('공지사항')}
-    >
+    <AppScreen backgroundColor="#fff" appBar={TitleAppBar('공지사항')}>
       <NoticeContainer />
     </AppScreen>
   );
