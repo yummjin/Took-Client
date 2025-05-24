@@ -9,7 +9,7 @@ interface ButtonsProps
 }
 
 const ButtonVariants = cva(
-  'rounded-md cursor-pointer font-medium focus:outline-none hover:brightness-90 ',
+  'rounded-md cursor-pointer font-medium focus:outline-none flex-shrink-0 hover:brightness-90 ',
   {
     variants: {
       intent: {
