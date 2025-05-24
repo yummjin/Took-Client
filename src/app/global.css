@@ -122,4 +122,8 @@ input[type='number'] {
   .shadow-resultItem {
     box-shadow: 8px 8px 30px 0px rgba(55, 127, 248, 0.16);
   }
+
+  .shadow-resultContent {
+    box-shadow: 11px 8px 30px rgba(55, 127, 248, 0.16);
+  }
 }
