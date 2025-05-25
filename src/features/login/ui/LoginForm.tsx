@@ -22,6 +22,7 @@ export default function LoginForm() {
           학생으로 로그인
         </Button>
         <Button
+          type="button"
           intent="textmain"
           size="fit"
           onClick={() => replace(PATH.ADMIN_HOME, {})}
