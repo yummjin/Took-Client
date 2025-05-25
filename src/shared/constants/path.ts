@@ -6,6 +6,7 @@ export const PATH = {
   NOTICE_CONTENT: 'NoticeContentScreen',
   VOTE: 'VoteScreen',
   VOTE_COMPLETE: 'VoteCompleteScreen',
+  VOTE_CREATE: 'VoteCreateScreen',
   VOTE_PROMISE: 'VotePromiseScreen',
   VOTE_RESULT: 'VoteResultScreen',
   VOTE_RESULT_CONTENT: 'VoteResultContentScreen',

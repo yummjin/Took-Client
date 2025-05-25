@@ -12,6 +12,7 @@ import { VoteScreen } from '@/screen/vote/ui';
 import { VotePromiseScreen } from '@/screen/vote-promise/ui';
 import { VoteCompleteScreen } from '@/screen/vote-complete/ui';
 import { AdminHomeScreen } from '@/screen/admin-home/ui';
+import { VoteCreateScreen } from '@/screen/vote-create/ui';
 
 export const { Stack, useFlow } = stackflow({
   transitionDuration: 350,
@@ -20,6 +21,7 @@ export const { Stack, useFlow } = stackflow({
     NoticeScreen,
     NoticeContentScreen,
     VoteScreen,
+    VoteCreateScreen,
     VoteCompleteScreen,
     VotePromiseScreen,
     VoteResultScreen,
