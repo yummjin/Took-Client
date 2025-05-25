@@ -1,5 +1,6 @@
 import { VoteBg } from '@/assets/image';
 import { AdminAppBar } from '@/shared/ui';
+import { AdminHomeContainer } from '@/widgets/admin-home/ui';
 import { AppScreen } from '@stackflow/plugin-basic-ui';
 
 export default function AdminHomeScreen() {
@@ -9,7 +10,7 @@ export default function AdminHomeScreen() {
       backgroundImage={`url(${VoteBg})`}
       appBar={AdminAppBar}
     >
-      <div className="p-normal size-full"></div>
+      <AdminHomeContainer />
     </AppScreen>
   );
 }
