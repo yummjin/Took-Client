@@ -21,7 +21,11 @@ export default function LoginForm() {
         <Button type="button" onClick={() => replace(PATH.HOME, {})}>
           학생으로 로그인
         </Button>
-        <Button intent="textmain" size="fit">
+        <Button
+          intent="textmain"
+          size="fit"
+          onClick={() => replace(PATH.ADMIN_HOME, {})}
+        >
           관리자로 로그인
         </Button>
       </div>
