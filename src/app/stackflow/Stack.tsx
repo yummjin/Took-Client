@@ -11,10 +11,12 @@ import { VoteResultContentScreen } from '@/screen/vote-result-content/ui';
 import { VoteScreen } from '@/screen/vote/ui';
 import { VotePromiseScreen } from '@/screen/vote-promise/ui';
 import { VoteCompleteScreen } from '@/screen/vote-complete/ui';
+import { AdminHomeScreen } from '@/screen/admin-home/ui';
 
 export const { Stack, useFlow } = stackflow({
   transitionDuration: 350,
   activities: {
+    AdminHomeScreen,
     NoticeScreen,
     NoticeContentScreen,
     VoteScreen,
