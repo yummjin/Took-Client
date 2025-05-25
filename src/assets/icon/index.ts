@@ -1,4 +1,6 @@
 import VerifiedCheckIcon from './icon-check-verified.svg';
+import CreateVoteIcon from './icon-create-vote.webp';
+import DashBoardIcon from './icon-dashboard.webp';
 import MessageIcon from './icon-message.svg';
 import NoticeIcon from './icon-notice.svg';
 import NotificationIcon from './icon-notification.svg';
@@ -8,6 +10,8 @@ import VoteCompleteIcon from './icon-vote-complete.png';
 import VoteIcon from './icon-vote.svg';
 
 export {
+  CreateVoteIcon,
+  DashBoardIcon,
   MessageIcon,
   NoticeIcon,
   NotificationIcon,
