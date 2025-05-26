@@ -8,8 +8,10 @@ import ResultIcon from './icon-result.svg';
 import UserIcon from './icon-user.png';
 import VoteCompleteIcon from './icon-vote-complete.png';
 import VoteIcon from './icon-vote.svg';
+import BackButton from './icon-default-back.svg';
 
 export {
+  BackButton,
   CreateVoteIcon,
   DashBoardIcon,
   MessageIcon,
