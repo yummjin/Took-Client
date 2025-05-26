@@ -1,7 +1,9 @@
+/* eslint-disable react-refresh/only-export-components */
 import { RiLogoutCircleRLine } from 'react-icons/ri';
 
-import { UserIcon } from '@/assets/icon';
+import { BackButton, UserIcon } from '@/assets/icon';
 import { HomeBg, LoginBg, VoteBg } from '@/assets/image';
+import type { MouseEvent } from 'react';
 
 const baseStyle = { height: '58px', border: false };
 
@@ -49,4 +51,21 @@ export const NoBackAppBar = (title?: string, bgImage?: string) => ({
   backgroundImage: `url(${bgImage})`,
   title: title || '',
   backButton: { renderIcon: () => <></> },
+});
+
+export const VoteCreateAppBar = (
+  title: string,
+  onBackButtonClick: (e: MouseEvent<HTMLButtonElement>) => void,
+) => ({
+  ...baseStyle,
+  backgroundColor: '#fff',
+  title: title || '',
+  backButton: {
+    onClick: onBackButtonClick,
+    renderIcon: () => (
+      <div>
+        <img src={BackButton} />
+      </div>
+    ),
+  },
 });
