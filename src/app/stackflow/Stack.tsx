@@ -2,6 +2,7 @@ import { basicUIPlugin } from '@stackflow/plugin-basic-ui';
 import { basicRendererPlugin } from '@stackflow/plugin-renderer-basic';
 import { stackflow } from '@stackflow/react';
 
+import { AdminDashboardScreen } from '@/screen/admin-dashboard/ui';
 import { LoginScreen } from '@/screen/login/ui';
 import { HomeScreen } from '@/screen/home/ui';
 import { NoticeScreen } from '@/screen/notice/ui';
@@ -18,6 +19,7 @@ import { VoteCreateCompleteScreen } from '@/screen/vote-create-complete/ui';
 export const { Stack, useFlow } = stackflow({
   transitionDuration: 350,
   activities: {
+    AdminDashboardScreen,
     AdminHomeScreen,
     NoticeScreen,
     NoticeContentScreen,

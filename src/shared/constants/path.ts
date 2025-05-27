@@ -1,4 +1,5 @@
 export const PATH = {
+  ADMIN_DASHBOARD: 'AdminDashboardScreen',
   ADMIN_HOME: 'AdminHomeScreen',
   HOME: 'HomeScreen',
   LOGIN: 'LoginScreen',
