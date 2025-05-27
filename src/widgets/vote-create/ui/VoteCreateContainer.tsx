@@ -8,11 +8,12 @@ import { Button, VoteCreateAppBar } from '@/shared/ui';
 
 import { useVoteCreateContext } from '@/features/vote-create/model';
 import { VoteDetailForm, VoteTitleForm } from '@/features/vote-create/ui';
+import { PATH } from '@/shared/constants';
 
 export default function VoteCreateContainer() {
   const { mode, setMode, isCandidateMode, setIsCandidateMode } =
     useVoteCreateContext();
-  const { pop } = useFlow();
+  const { pop, replace } = useFlow();
 
   const handleBackClick = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -22,6 +23,11 @@ export default function VoteCreateContainer() {
     }
     if (mode === 0) pop();
     else setMode(prev => prev - 1);
+  };
+
+  const handleNextClick = () => {
+    if (mode < 2) setMode(prev => prev + 1);
+    else replace(PATH.VOTE_CREATE_COMPLETE, {});
   };
 
   const MODE = [<VoteTitleForm />, <VoteDetailForm />];
@@ -53,7 +59,7 @@ export default function VoteCreateContainer() {
         <Button
           intent="disabled"
           className="flex-1 text-lg"
-          onClick={() => setMode(prev => prev + 1)}
+          onClick={handleNextClick}
         >
           다음
         </Button>
