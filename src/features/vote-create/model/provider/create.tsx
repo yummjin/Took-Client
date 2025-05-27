@@ -7,7 +7,7 @@ export default function VoteCreateProvider({
 }: {
   children: ReactNode;
 }) {
-  const [mode, setMode] = useState(1);
+  const [mode, setMode] = useState(0);
   const [isCandidateMode, setIsCandidateMode] = useState<boolean>(false);
 
   return (
