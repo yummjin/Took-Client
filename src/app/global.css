@@ -131,6 +131,14 @@ input[type='number'] {
     box-shadow: 0px 4px 30px 0px rgba(55, 127, 248, 0.1);
   }
 
+  .shadow-voteCreateItem {
+    box-shadow: 0px 8px 20px 0px rgba(55, 127, 248, 0.1);
+  }
+
+  .shadow-voteCreateDock {
+    box-shadow: 0px -4px 30px 0px rgba(55, 127, 248, 0.04);
+  }
+
   .perspective {
     perspective: 1000px;
   }

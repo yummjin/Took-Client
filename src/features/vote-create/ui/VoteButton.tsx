@@ -1,0 +1,28 @@
+import type { ButtonHTMLAttributes } from 'react';
+import { IoChevronDownSharp, IoChevronForwardSharp } from 'react-icons/io5';
+
+interface VoteButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  label: string;
+  arrowDown?: boolean;
+}
+
+export default function VoteInput({
+  arrowDown = false,
+  label,
+  onClick,
+}: VoteButtonProps) {
+  return (
+    <button
+      name="mainCandidate"
+      className="text-s border-sl flex h-17 w-full cursor-pointer items-center justify-between rounded-md border-[1px] px-5 focus:outline-none"
+      onClick={onClick}
+    >
+      {label}
+      {arrowDown ? (
+        <IoChevronDownSharp size={20} className="text-sl" />
+      ) : (
+        <IoChevronForwardSharp size={20} className="text-sl" />
+      )}
+    </button>
+  );
+}
