@@ -1,8 +1,9 @@
 import { useFlow } from '@/app/stackflow';
+
 import { PATH } from '@/shared/constants';
 import { cn, hexToRgba } from '@/shared/utils';
-import Button from './Button';
-import type { PathItem } from '../types';
+import { Button, DateBadge } from '@/shared/ui';
+import type { PathItem } from '@/shared/types';
 
 interface CardProps {
   isStackCard?: boolean;
@@ -57,9 +58,7 @@ export default function Card({
             {status}
           </div>
         </div>
-        <div className="bg-sxl flex items-center rounded-full p-1.5 text-sm text-[#999]">
-          D-7
-        </div>
+        {status === '진행중' && <DateBadge date={7} />}
       </div>
       <p className="text-md mb-2.5 text-2xl font-semibold">{title}</p>
       <p className="text-s mb-[34px] font-normal">{date}</p>
