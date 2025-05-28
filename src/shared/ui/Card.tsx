@@ -25,9 +25,17 @@ export default function Card({
     string,
     { color: string; to: PathItem; button: string }
   > = {
-    진행중: { color: '#32CD32', to: PATH.ADMIN_HOME, button: '진행상황' },
-    종료: { color: '#999', to: PATH.ADMIN_HOME, button: '자세히 보기' },
-    예정: { color: '#FFD503', to: PATH.ADMIN_HOME, button: '투표 수정하기' },
+    진행중: {
+      color: '#32CD32',
+      to: PATH.ADMIN_VOTE_STATUS,
+      button: '진행상황',
+    },
+    종료: { color: '#999', to: PATH.ADMIN_VOTE_RESULT, button: '자세히 보기' },
+    예정: {
+      color: '#FFD503',
+      to: PATH.ADMIN_VOTE_EDIT,
+      button: '투표 수정하기',
+    },
   };
 
   const { color, to, button } = STATUS[status];
