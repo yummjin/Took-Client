@@ -8,8 +8,9 @@ export default function CardList({ status }: { status: VoteStatus }) {
   );
   return (
     <div className="scrollbar-hide px-normal flex size-full flex-1 flex-col gap-y-[26px] overflow-scroll">
-      {data.map(({ id, campus, status, title, date }) => (
+      {data.map(({ id, campus, status, title, date }, index) => (
         <Card
+          className={index === 0 ? 'mt-8' : ''}
           key={id}
           campus={campus}
           status={status}
