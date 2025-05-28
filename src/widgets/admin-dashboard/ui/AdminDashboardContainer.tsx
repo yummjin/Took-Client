@@ -1,16 +1,18 @@
 import { CardList } from '@/features/admin-dashboard/ui';
+import type { VoteStatus } from '@/shared/types';
 import { cn } from '@/shared/utils';
 import { useState } from 'react';
 
 export default function AdminDashboardContainer() {
   const [selected, setSelected] = useState(0);
-  const STATUS = ['진행중', '종료', '예정'];
+  const STATUS: VoteStatus[] = ['진행중', '종료', '예정'];
 
   return (
     <div className="py-normal flex size-full flex-col">
       <div className="px-normal flex h-12 w-full">
         {STATUS.map((status, index) => (
           <button
+            key={index}
             name={status}
             className={cn(
               selected === index ? 'border-m text-m' : 'border-sxl',
@@ -22,7 +24,7 @@ export default function AdminDashboardContainer() {
           </button>
         ))}
       </div>
-      <CardList />
+      <CardList status={STATUS[selected]} />
     </div>
   );
 }
