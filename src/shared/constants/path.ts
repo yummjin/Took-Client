@@ -1,5 +1,8 @@
 export const PATH = {
   ADMIN_DASHBOARD: 'AdminDashboardScreen',
+  ADMIN_VOTE_EDIT: 'AdminVoteEditScreen',
+  ADMIN_VOTE_RESULT: 'AdminVoteResultScreen',
+  ADMIN_VOTE_STATUS: 'AdminVoteStatusScreen',
   ADMIN_HOME: 'AdminHomeScreen',
   HOME: 'HomeScreen',
   LOGIN: 'LoginScreen',
