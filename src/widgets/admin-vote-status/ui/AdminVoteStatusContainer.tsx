@@ -16,7 +16,7 @@ export default function AdminVoteStatusContainer() {
         <p className="text-2xl font-bold">투표를 완료했어요!</p>
       </div>
       <VoteGaugeChart percent={0.7} />
-      <div className="shadow-resultItem flex w-full flex-col gap-y-[7px] p-5">
+      <div className="shadow-resultItem flex w-full flex-col gap-y-[7px] rounded-lg p-5">
         <p>실시간 후보 득표율</p>
         <p className="text-res text-sm">구름 운동본부</p>
         <div className="from-grad2 to-grad1 h-6 w-[80%] bg-linear-to-r" />

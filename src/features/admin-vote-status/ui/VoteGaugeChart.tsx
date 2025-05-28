@@ -3,7 +3,7 @@ import GaugeChart from 'react-gauge-chart';
 export default function VoteGaugeChart({ percent }: { percent: number }) {
   return (
     <>
-      <div className="mb-8 flex w-full flex-col">
+      <div className="mb-7 flex w-full flex-col">
         <GaugeChart
           id="gauge-chart1"
           arcsLength={[percent, 1 - percent]}
