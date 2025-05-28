@@ -5,6 +5,7 @@ import Button from './Button';
 import type { PathItem } from '../types';
 
 interface CardProps {
+  isStackCard?: boolean;
   className?: string;
   campus: string;
   status: string;
@@ -13,6 +14,7 @@ interface CardProps {
 }
 
 export default function Card({
+  isStackCard = false,
   className,
   campus,
   status,
@@ -41,13 +43,8 @@ export default function Card({
   const { color, to, button } = STATUS[status];
   const background = hexToRgba(color, 0.1);
 
-  return (
-    <div
-      className={cn(
-        className,
-        'shadow-card flex h-fit w-full cursor-pointer flex-col rounded-lg bg-white p-6',
-      )}
-    >
+  const CardContent = ({ to }: { to: PathItem }) => (
+    <>
       <div className="mb-5 flex w-full justify-between">
         <div className="flex gap-x-1">
           <div className="bg-m/10 text-m rounded-full px-[12px] py-[6px] text-[13px] font-light">
@@ -72,8 +69,21 @@ export default function Card({
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         onClick={() => push(to, { notice: {} as any })}
       >
-        {button}
+        {to === PATH.VOTE ? '투표하기' : button}
       </Button>
+    </>
+  );
+
+  if (isStackCard) return <CardContent to={PATH.VOTE} />;
+
+  return (
+    <div
+      className={cn(
+        className,
+        'shadow-card flex h-fit w-full cursor-pointer flex-col rounded-lg bg-white p-6',
+      )}
+    >
+      <CardContent to={to} />
     </div>
   );
 }
