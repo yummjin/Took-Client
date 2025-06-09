@@ -24,19 +24,22 @@ export const HomeAppBar = {
   renderRight: () => <img src={UserIcon} alt="user" className="mr-[4px]" />,
 };
 
-export const AdminAppBar = {
+export const AdminAppBar = (onLogoutClick: () => void) => ({
   ...baseStyle,
   backgroundImage: `url(${VoteBg})`,
   renderLeft: () => (
     <span className="logo text-m ml-[4px] text-3xl">took!</span>
   ),
   renderRight: () => (
-    <button className="text-m mr-[4px] flex items-center gap-x-1">
+    <button
+      className="text-m mr-[4px] flex items-center gap-x-1"
+      onClick={onLogoutClick}
+    >
       <span>로그아웃</span>
       <RiLogoutCircleRLine size={24} />
     </button>
   ),
-};
+});
 
 export const TitleAppBar = (title?: string, bgImage?: string) => ({
   ...baseStyle,

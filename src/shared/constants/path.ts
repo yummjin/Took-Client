@@ -1,4 +1,8 @@
 export const PATH = {
+  ADMIN_DASHBOARD: 'AdminDashboardScreen',
+  ADMIN_VOTE_EDIT: 'AdminVoteEditScreen',
+  ADMIN_VOTE_RESULT: 'AdminVoteResultScreen',
+  ADMIN_VOTE_STATUS: 'AdminVoteStatusScreen',
   ADMIN_HOME: 'AdminHomeScreen',
   HOME: 'HomeScreen',
   LOGIN: 'LoginScreen',
@@ -8,6 +12,7 @@ export const PATH = {
   VOTE_COMPLETE: 'VoteCompleteScreen',
   VOTE_CREATE: 'VoteCreateScreen',
   VOTE_CREATE_COMPLETE: 'VoteCreateCompleteScreen',
+  VOTE_EDIT: 'VoteEditScreen',
   VOTE_PROMISE: 'VotePromiseScreen',
   VOTE_RESULT: 'VoteResultScreen',
   VOTE_RESULT_CONTENT: 'VoteResultContentScreen',

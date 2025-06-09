@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { animate, motion } from 'framer-motion';
 
-import { Card } from '@/features/home/ui';
+import { Card } from '@/shared/ui';
 import type { CardProps } from '@/features/home/types';
 import { CARD_MOCK } from '@/features/home/mock';
 
@@ -93,6 +93,7 @@ export default function CardStack() {
               }}
             >
               <Card
+                isStackCard
                 campus={card.campus}
                 status={card.status}
                 title={card.title}
