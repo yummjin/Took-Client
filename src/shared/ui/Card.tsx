@@ -12,6 +12,7 @@ interface CardProps {
   status: string;
   title: string;
   date: string;
+  customTo?: PathItem;
 }
 
 export default function Card({
@@ -21,6 +22,7 @@ export default function Card({
   status,
   title,
   date,
+  customTo,
 }: CardProps) {
   const { push } = useFlow();
 
@@ -82,7 +84,7 @@ export default function Card({
         'shadow-card flex h-fit w-full cursor-pointer flex-col rounded-lg bg-white p-6',
       )}
     >
-      <CardContent to={to} />
+      <CardContent to={customTo ?? to} />
     </div>
   );
 }
