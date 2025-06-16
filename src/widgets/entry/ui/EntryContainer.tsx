@@ -4,7 +4,7 @@ import { PATH } from '@/shared/constants';
 import { Button } from '@/shared/ui';
 
 export default function EntryContainer() {
-  const { push } = useFlow();
+  const { replace } = useFlow();
 
   return (
     <div className="flex size-full flex-col">
@@ -24,14 +24,14 @@ export default function EntryContainer() {
           <Button
             intent="login"
             className="py-[14px] text-lg"
-            onClick={() => push(PATH.LOGIN, {})}
+            onClick={() => replace(PATH.LOGIN, {})}
           >
             학생으로 시작하기
           </Button>
           <Button
             intent="loginWhite"
             className="py-[14px] text-lg"
-            onClick={() => push(PATH.LOGIN, {})}
+            onClick={() => replace(PATH.LOGIN, {})}
           >
             관리자로 시작하기
           </Button>
