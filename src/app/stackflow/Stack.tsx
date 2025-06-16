@@ -19,6 +19,7 @@ import { VoteResultContentScreen } from '@/screen/vote-result-content/ui';
 import { VoteResultScreen } from '@/screen/vote-result/ui';
 import { VoteScreen } from '@/screen/vote/ui';
 import { VoteEditScreen } from '@/screen/vote-edit/ui';
+import { EntryScreen } from '@/screen/entry/ui';
 
 export const { Stack, useFlow } = stackflow({
   transitionDuration: 350,
@@ -28,6 +29,7 @@ export const { Stack, useFlow } = stackflow({
     AdminVoteStatusScreen,
     AdminVoteEditScreen,
     AdminHomeScreen,
+    EntryScreen,
     NoticeScreen,
     NoticeContentScreen,
     VoteEditScreen,
@@ -47,5 +49,7 @@ export const { Stack, useFlow } = stackflow({
       theme: 'cupertino',
     }),
   ],
-  initialActivity: () => 'LoginScreen',
+  initialActivity: () => {
+    return 'EntryScreen';
+  },
 });

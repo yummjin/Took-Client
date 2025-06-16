@@ -37,7 +37,7 @@
 @font-face {
   font-family: 'Fredoka';
   src: url('../assets/font/fredoka-variable.ttf') format('truetype');
-  font-weight: 600;
+  font-weight: 600, 700;
 }
 
 :root {

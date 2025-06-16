@@ -10,26 +10,20 @@ const baseStyle = { height: '58px', border: false };
 export const BasicAppBar = {
   ...baseStyle,
   backgroundImage: `url(${LoginBg})`,
-  renderLeft: () => (
-    <span className="logo text-m ml-[4px] text-3xl">took!</span>
-  ),
+  renderLeft: () => Logo,
 };
 
 export const HomeAppBar = {
   ...baseStyle,
   backgroundImage: `url(${HomeBg})`,
-  renderLeft: () => (
-    <span className="logo text-m ml-[4px] text-3xl">took!</span>
-  ),
+  renderLeft: () => Logo,
   renderRight: () => <img src={UserIcon} alt="user" className="mr-[4px]" />,
 };
 
 export const AdminAppBar = (onLogoutClick: () => void) => ({
   ...baseStyle,
   backgroundImage: `url(${VoteBg})`,
-  renderLeft: () => (
-    <span className="logo text-m ml-[4px] text-3xl">took!</span>
-  ),
+  renderLeft: () => Logo,
   renderRight: () => (
     <button
       className="text-m mr-[4px] flex items-center gap-x-1"
@@ -56,6 +50,14 @@ export const NoBackAppBar = (title?: string, bgImage?: string) => ({
   backButton: { renderIcon: () => <></> },
 });
 
+export const NoBackLogoAppBar = (bgImage?: string) => ({
+  ...baseStyle,
+  backgroundColor: '#fff',
+  backgroundImage: `url(${bgImage})`,
+  renderLeft: () => Logo,
+  backButton: { renderIcon: () => <></> },
+});
+
 export const VoteCreateAppBar = (
   title: string,
   onBackButtonClick: (e: MouseEvent<HTMLButtonElement>) => void,
@@ -72,3 +74,7 @@ export const VoteCreateAppBar = (
     ),
   },
 });
+
+const Logo = (
+  <span className="logo text-m ml-[4px] text-3xl font-semibold">took!</span>
+);
