@@ -4,6 +4,7 @@ export const PATH = {
   ADMIN_VOTE_RESULT: 'AdminVoteResultScreen',
   ADMIN_VOTE_STATUS: 'AdminVoteStatusScreen',
   ADMIN_HOME: 'AdminHomeScreen',
+  ENTRY: 'EntryScreen',
   HOME: 'HomeScreen',
   LOGIN: 'LoginScreen',
   NOTICE: 'NoticeScreen',
