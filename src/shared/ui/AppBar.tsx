@@ -56,6 +56,16 @@ export const NoBackAppBar = (title?: string, bgImage?: string) => ({
   backButton: { renderIcon: () => <></> },
 });
 
+export const NoBackLogoAppBar = (bgImage?: string) => ({
+  ...baseStyle,
+  backgroundColor: '#fff',
+  backgroundImage: `url(${bgImage})`,
+  renderLeft: () => (
+    <span className="logo text-m ml-[4px] text-3xl font-semibold">took!</span>
+  ),
+  backButton: { renderIcon: () => <></> },
+});
+
 export const VoteCreateAppBar = (
   title: string,
   onBackButtonClick: (e: MouseEvent<HTMLButtonElement>) => void,
