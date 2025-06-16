@@ -28,7 +28,7 @@ export const AdminAppBar = (onLogoutClick: () => void) => ({
   ...baseStyle,
   backgroundImage: `url(${VoteBg})`,
   renderLeft: () => (
-    <span className="logo text-m ml-[4px] text-3xl">took!</span>
+    <span className="logo text-m ml-[4px] text-3xl font-semibold">took!</span>
   ),
   renderRight: () => (
     <button
