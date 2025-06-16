@@ -18,3 +18,9 @@ export const PATH = {
   VOTE_RESULT: 'VoteResultScreen',
   VOTE_RESULT_CONTENT: 'VoteResultContentScreen',
 } as const;
+
+export const RAW_PATH = {
+  HOME: '/',
+  AUTH: '/auth',
+  SIGNUP: '/signup',
+};

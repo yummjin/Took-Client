@@ -49,5 +49,7 @@ export const { Stack, useFlow } = stackflow({
       theme: 'cupertino',
     }),
   ],
-  initialActivity: () => 'EntryScreen',
+  initialActivity: () => {
+    return 'EntryScreen';
+  },
 });
