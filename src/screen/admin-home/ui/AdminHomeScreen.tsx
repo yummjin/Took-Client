@@ -12,7 +12,10 @@ export default function AdminHomeScreen() {
     <AppScreen
       preventSwipeBack
       backgroundImage={`url(${VoteBg})`}
-      appBar={AdminAppBar(() => replace(PATH.LOGIN, {}))}
+      appBar={AdminAppBar(
+        () => replace(PATH.LOGIN, {}),
+        () => replace(PATH.LOGIN, {}),
+      )}
     >
       <AdminHomeContainer />
     </AppScreen>
