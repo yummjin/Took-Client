@@ -9,6 +9,7 @@ export const PATH = {
   LOGIN: 'LoginScreen',
   NOTICE: 'NoticeScreen',
   NOTICE_CONTENT: 'NoticeContentScreen',
+  NOTICE_CREATE: 'NoticeCreateScreen',
   VOTE: 'VoteScreen',
   VOTE_COMPLETE: 'VoteCompleteScreen',
   VOTE_CREATE: 'VoteCreateScreen',

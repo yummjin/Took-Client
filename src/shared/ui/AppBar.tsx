@@ -1,7 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
-import { RiLogoutCircleRLine } from 'react-icons/ri';
 
-import { BackButton, UserIcon } from '@/assets/icon';
+import { BackButton, LogoutIcon, UserIcon, WriteIcon } from '@/assets/icon';
 import { HomeBg, LoginBg, VoteBg } from '@/assets/image';
 import type { MouseEvent } from 'react';
 
@@ -20,18 +19,28 @@ export const HomeAppBar = {
   renderRight: () => <img src={UserIcon} alt="user" className="mr-[4px]" />,
 };
 
-export const AdminAppBar = (onLogoutClick: () => void) => ({
+export const AdminAppBar = (
+  onLogoutClick: () => void,
+  onWriteClick: () => void,
+) => ({
   ...baseStyle,
   backgroundImage: `url(${VoteBg})`,
   renderLeft: () => Logo,
   renderRight: () => (
-    <button
-      className="text-m mr-[4px] flex items-center gap-x-1"
-      onClick={onLogoutClick}
-    >
-      <span>로그아웃</span>
-      <RiLogoutCircleRLine size={24} />
-    </button>
+    <>
+      <button
+        className="text-m mr-[12px] flex items-center gap-x-1"
+        onClick={onLogoutClick}
+      >
+        <img src={LogoutIcon} />
+      </button>
+      <button
+        className="text-m mr-[4px] flex items-center gap-x-1"
+        onClick={onWriteClick}
+      >
+        <img src={WriteIcon} />
+      </button>
+    </>
   ),
 });
 

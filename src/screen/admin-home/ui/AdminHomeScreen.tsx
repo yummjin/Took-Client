@@ -6,13 +6,16 @@ import { AdminHomeContainer } from '@/widgets/admin-home/ui';
 import { AppScreen } from '@stackflow/plugin-basic-ui';
 
 export default function AdminHomeScreen() {
-  const { replace } = useFlow();
+  const { replace, push } = useFlow();
 
   return (
     <AppScreen
       preventSwipeBack
       backgroundImage={`url(${VoteBg})`}
-      appBar={AdminAppBar(() => replace(PATH.LOGIN, {}))}
+      appBar={AdminAppBar(
+        () => replace(PATH.LOGIN, {}),
+        () => push(PATH.NOTICE_CREATE, {}),
+      )}
     >
       <AdminHomeContainer />
     </AppScreen>
