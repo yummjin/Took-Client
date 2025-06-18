@@ -12,7 +12,7 @@ export default function NoticeItem({ id, title, type, date }: Notice) {
   return (
     <button
       name={`${id}`}
-      className="flex w-full cursor-pointer items-center overflow-hidden py-6 focus:outline-none"
+      className="flex w-full flex-shrink-0 cursor-pointer items-center overflow-hidden py-6 focus:outline-none"
       onClick={() =>
         push(PATH.NOTICE_CONTENT, { notice: { id, title, type, date } })
       }
@@ -23,7 +23,7 @@ export default function NoticeItem({ id, title, type, date }: Notice) {
       />
       <div className="ml-[10px] flex w-full flex-col items-start">
         <div className="flex w-full justify-between text-lg font-semibold">
-          <p className="w-52 overflow-hidden text-start text-nowrap text-ellipsis">
+          <p className="w-52 overflow-hidden text-start font-normal text-nowrap text-ellipsis">
             {title}
           </p>
           <div

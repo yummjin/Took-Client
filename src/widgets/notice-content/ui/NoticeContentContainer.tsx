@@ -4,12 +4,12 @@ export default function NoticeContainer({ title }: { title: string }) {
 
   return (
     <div className="p-normal scrollbar-hide flex size-full flex-col overflow-scroll">
-      <p className="mt-mt text-lg font-semibold">{title}</p>
-      <p className="mb-[14px] text-sm font-normal tracking-wide text-[#999]">
+      <p className="mt-mt mb-1.5 font-medium">{title}</p>
+      <p className="mb-[14px] text-sm font-medium tracking-wide text-[#999]">
         2025.03.19
       </p>
       <hr className="mb-10 text-[#DADADA]" />
-      <div className="flex flex-col gap-1 text-[#767676]">
+      <div className="text-s flex flex-col gap-1 font-normal">
         {data.split('\n').map((line, index) => (
           <div key={index} className="mb-1">
             {line}
