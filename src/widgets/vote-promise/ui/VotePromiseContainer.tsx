@@ -11,8 +11,8 @@ export default function VotePromiseContainer() {
 
   return (
     <div className="p-normal flex size-full flex-col items-center">
-      <p className="mb-11 text-center text-xl font-semibold">
-        카드를 탭해서 뒤집어보세요
+      <p className="mb-11 text-center text-lg font-semibold">
+        카드를 탭해서 뒤집어보세요!
       </p>
       <VotePromiseCard />
       <div className="my-7 flex w-full justify-center">
