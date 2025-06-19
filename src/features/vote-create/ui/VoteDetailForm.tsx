@@ -1,8 +1,11 @@
-import { IoChevronDownSharp } from 'react-icons/io5';
 import { useVoteCreateContext } from '../model';
-import { VoteButton, VoteCandidateForm } from '.';
+import { VoteButton, VoteCandidateForm, VoteInput } from '.';
 
-export default function VoteDetailForm() {
+interface VoteDetailFormProps {
+  teamName: string;
+}
+
+export default function VoteDetailForm({ teamName }: VoteDetailFormProps) {
   const { isCandidateMode, setIsCandidateMode } = useVoteCreateContext();
 
   return (
@@ -12,10 +15,12 @@ export default function VoteDetailForm() {
       ) : (
         <>
           <div className="mt-11 flex flex-col items-start text-lg font-semibold">
-            <p>'구름' 선거운동본부</p>
+            <p>
+              <span className="text-m">'{teamName}'</span> 선거운동본부
+            </p>
             <p>후보자를 입력해주세요</p>
           </div>
-          <div className="text-s mt-[18px] flex w-full flex-col gap-[14px] text-lg font-semibold">
+          <div className="text-s mt-[18px] flex w-full flex-col gap-[14px]">
             <VoteButton
               label="정후보자"
               onClick={() => setIsCandidateMode(true)}
@@ -24,13 +29,7 @@ export default function VoteDetailForm() {
               label="부후보자"
               onClick={() => setIsCandidateMode(true)}
             />
-            <div className="border-sl flex h-45 w-full flex-col gap-y-2.5 rounded-md border-[1px] p-5">
-              <div className="flex items-center justify-between">
-                핵심공약을 입력해주세요
-                <IoChevronDownSharp size={20} className="text-sl" />
-              </div>
-              <textarea className="flex-1 resize-none font-medium text-black focus:outline-none"></textarea>
-            </div>
+            <VoteInput placeholder="핵심 공약 1" />
           </div>
         </>
       )}
