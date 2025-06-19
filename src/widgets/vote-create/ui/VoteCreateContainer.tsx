@@ -30,7 +30,11 @@ export default function VoteCreateContainer() {
     else replace(PATH.VOTE_CREATE_COMPLETE, {});
   };
 
-  const MODE = [<VoteTitleForm />, <VoteDetailForm />];
+  const MODE = [
+    <VoteTitleForm />,
+    <VoteDetailForm teamName="구름" />,
+    <VoteDetailForm teamName="하늘" />,
+  ];
 
   return (
     <AppScreen
