@@ -12,7 +12,7 @@ import NoticeIcon from './icon-notice.svg';
 import NotificationIcon from './icon-notification.svg';
 import ResultIcon from './icon-result.svg';
 import TextBoxIcon from './icon-textbox.svg';
-import UserIcon from './icon-user.png';
+import UserIcon from './icon-user.svg';
 import VoteCompleteIcon from './icon-vote-complete.png';
 import VoteIcon from './icon-vote.svg';
 import WriteIcon from './icon-write.svg';

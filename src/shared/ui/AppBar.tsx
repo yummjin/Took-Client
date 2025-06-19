@@ -1,5 +1,4 @@
 /* eslint-disable react-refresh/only-export-components */
-
 import { BackButton, LogoutIcon, UserIcon, WriteIcon } from '@/assets/icon';
 import { HomeBg, LoginBg, VoteBg } from '@/assets/image';
 import type { MouseEvent } from 'react';
@@ -12,12 +11,30 @@ export const BasicAppBar = {
   renderLeft: () => Logo,
 };
 
-export const HomeAppBar = {
+export const HomeAppBar = (
+  onLogoutClick: () => void,
+  onUserClick: () => void,
+) => ({
   ...baseStyle,
   backgroundImage: `url(${HomeBg})`,
   renderLeft: () => Logo,
-  renderRight: () => <img src={UserIcon} alt="user" className="mr-[4px]" />,
-};
+  renderRight: () => (
+    <>
+      <button
+        className="text-m mr-[12px] flex items-center gap-x-1"
+        onClick={onLogoutClick}
+      >
+        <img src={LogoutIcon} />
+      </button>
+      <button
+        className="text-m mr-[4px] flex items-center gap-x-1"
+        onClick={onUserClick}
+      >
+        <img src={UserIcon} />
+      </button>
+    </>
+  ),
+});
 
 export const AdminAppBar = (
   onLogoutClick: () => void,
